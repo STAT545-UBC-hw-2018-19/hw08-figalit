@@ -1,6 +1,5 @@
 #
-# This is a Shiny web application. You can run the application by clicking
-# the 'Run App' button above.
+# This is a Shiny web application.
 #
 # Author: Figali Taho
 #
@@ -13,7 +12,6 @@ library(shinythemes)
 
 
 # Load data and define necessary variables.
-# bcl <- read.csv("/home/ftaho/shinyapp/BCLiquor/bcl-data.csv", stringsAsFactors = FALSE)
 bcl <- read.csv("~/Desktop/STAT/hw8/BCLiquor/data/bcl-data.csv", stringsAsFactors = FALSE)
 beverages <- unique(bcl$Type)
 
@@ -45,16 +43,6 @@ ui <- fluidPage(
         tabPanel("Table", dataTableOutput("bcl_data"))
       )
     )
-    
-   # mainPanel(
-      
-      
-      #h3(textOutput("summaryText")),
-      #plotOutput("price_hist"), 
-      # tableOutput("bcl_data")
-      # Data table output enables sorting by anything. 
-      #dataTableOutput("bcl_data")
-    #)
   )
 )
 
